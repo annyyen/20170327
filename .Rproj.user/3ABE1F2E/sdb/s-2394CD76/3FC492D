@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(readr)\nhospitalnew <- read_csv(\"C:/Users/user/Desktop/hospitalnew.csv\")\nView(hospitalnew)\n\nstrsplit (\"星期一上午看診、星期二上午看診、星期三上午看診、星期四上午看診、星期五上午看診、星期六上午看診、星期日上午看診、星期一下午看診、星期二下午看診、星期三下午看診、星期四下午看診、星期五下午看診、星期六下午看診、星期日下午看診、星期一晚上看診、星期二晚上看診、星期三晚上看診、星期四晚上看診、星期五晚上看診、星期六晚上看診、星期日晚上看診\n\n\", \"、\")\nnewfile <- strsplit (\"星期一上午看診、星期二上午看診、星期三上午看診、星期四上午看診、星期五上午看診、星期六上午看診、星期日上午看診、星期一下午看診、星期二下午看診、星期三下午看診、星期四下午看診、星期五下午看診、星期六下午看診、星期日下午看診、星期一晚上看診、星期二晚上看診、星期三晚上看診、星期四晚上看診、星期五晚上看診、星期六晚上看診、星期日晚上看診\n\n\", \"、\")\nView(newfile)\n\n\n\n\n# library(dplyr)\n# filterVector <- c(\"中醫\", \"牙科\")\n# filterVector\n# newfile <- filter(hospitalnew, ! c(\"中醫\", \"牙科\") %in% filterVector)",
+    "created" : 1490613241674.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1062132661",
+    "id" : "3FC492D",
+    "lastKnownWriteTime" : 1490618897,
+    "last_content_update" : 1490618897250,
+    "path" : "~/畢專/20170327/split.R",
+    "project_path" : "split.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

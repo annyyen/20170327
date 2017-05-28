@@ -17,18 +17,20 @@ separate_DF <- separate(category_DF, 固定看診時段, paste0("T",c("1","2","3
 
 # 寬表轉長表
 #install.packages("reshape2")
+#install.packages("Data.table")
 library(reshape2)
+library(Data.table)
 setnames(separate_DF,1,"醫事機構代碼")
 long <- melt(separate_DF%>%select(醫事機構代碼,starts_with("T")),id.vars = c("醫事機構代碼"))
 long_DF <- separate_DF%>%gather(test,testvalue, T1:T21)
 
 
+#切割星期，時段，看診/休診
+#Tidyverse,split,column
+#install.packages("tidyverse")
+library("tidyverse")
 
-
-
-
-
-
-
+long_DF$testvalue <- substr(long_DF$testvalue,1:3)
+View(long_DF)
 
 

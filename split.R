@@ -17,8 +17,10 @@ separate_DF <- separate(category_DF, 固定看診時段, c("1","2","3","4","5","
 # 寬表轉長表
 # install.packages("reshape2")
 # install.packages("dplyr")
+# install.packages("data.table")
 library(reshape2)
 library(dplyr)
+library(data.table)
 setNames(separate_DF,1,"醫事機構代碼")
 long <- melt(separate_DF%>%select(醫事機構代碼,starts_with("T")),id.vars = c("醫事機構代碼"))
 long_DF <- separate_DF%>%gather(test,testvalue, T1:T21)
